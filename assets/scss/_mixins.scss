@@ -1,0 +1,18 @@
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0.85vw) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+
+  @if ($direction == row) {
+    column-gap: $gap;
+  } @else if ($direction == column) {
+    row-gap: $gap;
+  }
+}
+
+@mixin grid($desktop-columns: 1, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($desktop-columns, 1fr);
+  grid-gap: $gap;
+}

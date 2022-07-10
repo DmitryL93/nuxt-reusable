@@ -1,0 +1,27 @@
+@import './_reset.scss', './_variables.scss', './mixins.scss', './inheritance';
+
+@font-face {
+  font-family: 'NotoSansJP';
+  src: url('@/static/fonts/NotoSansJP-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'NotoSansJP';
+  src: url('@/static/fonts/NotoSansJP-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+*,
+body {
+  box-sizing: border-box;
+  font-family: 'NotoSansJP', sans-serif;
+  font-size: 0.85vw;
+  font-weight: 400;
+  line-height: 1;
+  color: #333;
+
+  @media screen and (max-width: map-get($breakpoint, tablet)) {
+    font-size: $resize-ratio;
+  }
+}
